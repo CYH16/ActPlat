@@ -10,6 +10,8 @@
 <script type="text/javascript" src={% static 'js/godown.js' %}></script>
 <script type="text/javascript" src={% static 'js/loading.js' %}></script>
 <script type="text/javascript" src={% static 'js/menu.js' %}></script>
+<script type="text/javascript" src={% static 'js/replace.js' %}></script>
+<script type="text/javascript" src={% static 'js/hover.js' %}></script>
 </head>
 
 
@@ -24,62 +26,88 @@
 	<ul>
 		<li class = "option">活動時間
 			<ul class = "selection">
-				<li id = "1.1">a</li>
-				<li id = "1.2">b</li>
-				<li id = "1.3">c</li>
-				<li id = "1.4">d</li>
+				<li id = "1.1"><div id="selection_text">a</div><div id="slider"><div id="switch"></div></div></li>
+				<li id = "1.2"><div id="selection_text">b</div><div id="slider"><div id="switch"></div></div></li>
+				<li id = "1.3"><div id="selection_text">c</div><div id="slider"><div id="switch"></div></div></li>
+				<li id = "1.4"><div id="selection_text">d</div><div id="slider"><div id="switch"></div></div></li>
 			</ul>
 		</li>
 		<li class = "option">報名時間
 			<ul class = "selection">
-				<li id = "2.1">a</li>
-				<li id = "2.2">b</li>
-				<li id = "2.3">c</li>
-				<li id = "2.4">d</li>
+				<li id = "2.1"><div id="selection_text">A</div><div id="slider"><div id="switch"></div></div></li>
+				<li id = "2.2"><div id="selection_text">B</div><div id="slider"><div id="switch"></div></div></li>
+				<li id = "2.3"><div id="selection_text">C</div><div id="slider"><div id="switch"></div></div></li>
+				<li id = "2.4"><div id="selection_text">D</div><div id="slider"><div id="switch"></div></div></li>
+			</ul>
+		</li>
+		<li class = "option">類型
+			<ul class = "selection">
+				<li id = "3.1"><div id="selection_text">戶內．學術</div><div id="slider"><div id="switch"></li>
+				<li id = "3.2"><div id="selection_text">戶內．休閒</div><div id="slider"><div id="switch"></li>
+				<li id = "3.3"><div id="selection_text">戶外．運動</div><div id="slider"><div id="switch"></li>
+				<li id = "3.4"><div id="selection_text">戶外．休閒</div><div id="slider"><div id="switch"></li>
 			</ul>
 		</li>
 		<li class = "option">費用
 			<ul class = "selection">
-				<li id = "3.1">a</li>
-				<li id = "3.2">b</li>
-				<li id = "3.3">c</li>
-				<li id = "3.4">d</li>
+				<li id = "4.1"><div id="selection_text">免費</div><div id="slider"><div id="switch"></li>
+				<li id = "4.2"><div id="selection_text">0-100元</div><div id="slider"><div id="switch"></li>
+				<li id = "4.3"><div id="selection_text">101-200元</div><div id="slider"><div id="switch"></li>
+				<li id = "4.4"><div id="selection_text">200元以上</div><div id="slider"><div id="switch"></div></div></li>
 			</ul>
 		</li>
 		<li class = "option">對象
 			<ul class = "selection">
-				<li id = "4.1">a</li>
-				<li id = "4.2">b</li>
-				<li id = "4.3">c</li>
-				<li id = "4.4">d</li>
+				<li id = "5.1"><div id="selection_text">不限</div><div id="slider"><div id="switch"></li>
+				<li id = "5.2"><div id="selection_text">陽明大學學生</div><div id="slider"><div id="switch"></li>
+				<li id = "5.3"><div id="selection_text">陽明大學師生</div><div id="slider"><div id="switch"></li>
+				<li id = "5.4"><div id="selection_text">系內限定</div><div id="slider"><div id="switch"></li>
 			</ul>
 		</li>
-		<li class = "option">標籤
-			<ul class = "selection">
-				<li id = "5.1">a</li>
-				<li id = "5.2">b</li>
-				<li id = "5.3">c</li>
-				<li id = "5.4">d</li>
-			</ul>
-		</li>
+
 	</ul>
 </div>
 
 <div id="container">
 	<div id="content">
+		<!--
 		<div id="block">
-			<div class="image"><img src={% static 'image/test.jpg' %}></div>
-			<h1>寶藏巖光節</h1>
-			<div id="brief">介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹</div>
+			<div class="image"><img src={% static 'image/' %}{{ post.圖片 }}></div>
+			<h1>{{ post.活動名稱 }}</h1>
+			<div id="brief">{{ post.簡介 }}</div>
 			<div id="more_info">
-				<p>時間&nbsp;&nbsp;|&nbsp;&nbsp;2017.12.20(日)19:30&nbsp;~&nbsp;2017.12.21(一)05:00<br></p>
-				<p>地點&nbsp;&nbsp;|&nbsp;&nbsp;陽明大學音樂前廳<br></p>
-				<p>報名&nbsp;&nbsp;|&nbsp;&nbsp;2017.12.20(日)19:30&nbsp;~&nbsp;2017.12.21(一)05:00<br></p>
-				<p>費用&nbsp;&nbsp;|&nbsp;&nbsp;100元<br></p>
-				<p>對象&nbsp;&nbsp;|&nbsp;&nbsp;陽明大學全體師生<br></p>
+				<p>時間&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.開始日期與時間 }}&nbsp;~&nbsp;{{ post.結束日期與時間 }}<br></p>
+				<p>地點&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.地點 }}<br></p>
+				<p>報名&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.報名死線 }}<br></p>
+				<p>費用&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.費用 }}<br></p>
+				<p>對象&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.對象 }}<br></p>
 				<p>標籤&nbsp;&nbsp;|&nbsp;&nbsp;OAF<br></p>
 			</div>
 		</div>
+		-->
+		{% for post in posts %}
+		<a target="_blank" href="{% url 'activity_detail' pk=post.pk %}">
+		<div class="{{ post.標籤 }}" id="block">
+			<div class="image"><img src={% static 'image/' %}{{ post.圖片 }}></div>
+			<div class="text">
+				<div id="title"><div id="title_text">{{ post.活動名稱 }}</div><img src=""></div>
+				<div id="time">{{ post.開始日期與時間|date:"Y.m.d (D) H:i" }} ~ {{ post.結束日期與時間|date:"Y.m.d (D) H:i" }}</div>
+				<div id="brief">{{ post.簡介 }}</div>
+			</div>
+			<div id="more_info">
+				{% autoescape off %}
+				<div id="icon_location"></div>
+				<p id="location">{{ post.地點 }}</p>
+				<div id="icon_fee"></div>
+				<p id="fee">{{ post.費用 }}</p>
+				<div id="icon_deadline"></div>
+				<p>{{ post.報名死線 }}</p>
+				{% endautoescape %}
+			</div>
+		</div>
+		</a>
+		{% endfor %}
+		<!--
 		<div id="block">
 			<div class="image"><img src={% static 'image/test2.jpg' %}></div>
 			<h1>Taipei Hackathon</h1>
@@ -120,6 +148,7 @@
 		</div>
 		<div id="block">
 		</div>
+		-->
 	<!--content--></div>
 <!--container--></div>
 <div id="footer">

@@ -24,19 +24,47 @@ $(function(){
 	});
 });
 
+var selected = [0,[0,1,1,1,1],[0,1,1,1,1],[0,1,1,1,1],[0,1,1,1,1],[0,1,1,1,1]];
+var keyword = [0,[0,"a","b","c","d"],[0,"A","B","C","D"],[0,"戶內．學術","戶內．休閒","戶外．運動","戶外．休閒"],[0,"免費","每人0-100元","每人101-200元","每人200元以上"],[0,"不限","陽明大學學生","陽明大學師生","系內限定"]];
+
 $(function(){
-	var selected = [0,[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
-	$(".selection li").click(function(){
+
+	$(".selection li").stop().click(function(){
 		id = $(this).attr('id');
 		category = parseInt(id.substring(0));
 		parameter = parseInt(id.substring(2));
 		if(selected[category][parameter]==0){
-			$(this).css("background","rgba(0, 225, 228, 1)");
+			$(this).css("background","rgba(240, 255, 255, 1)");
+			$(this).children("#slider").css("background","rgb(15,24,43)");
+			$(this).children("#slider").children("#switch").css("background","rgba(240, 255, 255, 1)");
+			$(this).children("#slider").children("#switch").removeClass("to_left").addClass("to_right");
 			selected[category][parameter]=1;
+			show_selected();
 		}
 		else if(selected[category][parameter]==1){
-			$(this).css("background","rgba(240, 255, 255, 1)");
+			$(this).css("background","rgba(126, 138, 150, 1)");
+			$(this).children("#slider").css("background","rgba(83, 93, 105, 1)");
+			$(this).children("#slider").children("#switch").css("background","rgba(126, 138, 150, 1)");
+			$(this).children("#slider").children("#switch").removeClass("to_right").addClass("to_left");
 			selected[category][parameter]=0;
+			show_selected();
 		}
 	});
-});		
+
+});
+function show_selected(){
+	var selectedClass = "";
+	$("#content").stop().fadeTo(1, 0).delay(200);
+	$("#content > a > div#block").addClass("show").removeClass("hide");
+	for(i=1;i<=5;i++){
+		for(j=1;j<=4;j++){
+			if(selected[i][j]==0){
+				selectedClass = keyword[i][j];
+				$("#content > a > div#block."+selectedClass).addClass("hide").removeClass("show");
+			}
+		}
+	}
+	$("#content > a > div#block.hide").fadeOut(200);
+	$("#content > a > div#block.show").fadeIn(200);
+	$("#content").fadeTo(500, 1);
+}

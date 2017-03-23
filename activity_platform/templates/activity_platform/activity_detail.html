@@ -1,0 +1,77 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>實驗網站</title>
+<link rel="stylesheet" href= {% static 'css/activity_detail.css' %} type="text/css" />
+<script type="text/javascript" src={% static 'js/jquery-3.1.1.min.js' %}></script>
+<script type="text/javascript" src={% static 'js/jquery.color-2.1.2.js' %}></script>
+<script type="text/javascript" src={% static 'js/menu2.js' %}></script>
+<script type="text/javascript" src={% static 'js/scroll.js' %}></script>
+</head>
+
+
+<body>
+<div id="head">
+	<ul>
+		<li><span class = "option1">活動名稱</span></li>
+		<li><span class = "option2">活動簡介</span></li>
+		<li><span class = "option3">基本資訊</span></li>
+		<li><span class = "option4">聯絡資訊</span></li>
+	</ul>
+	<div class = "arrow-up"></div>
+	<div class = "arrow-up2"></div>
+</div>
+<div id="container">
+	<div class="p1">
+		<div class="title">
+			<div class="title_image"><img src={% static 'image/' %}{{ post.圖片 }}></div>
+			<div class="title_text">{{ post.活動名稱 }}</div>
+			<div class="title_subtext">{{ post.副標題 }}</div>
+		</div>
+	</div>
+	<div class="p2">
+		<div class="title2">
+			<div class="title_text2">簡介</div>
+		</div>
+		<div class="brief">
+			{{ post.簡介 }}
+		</div>
+	</div>
+	<div class="p3">
+	<div class="wrapper">
+		<div class="info">
+			<div class="icon"></div>
+			<div class="text"></div>
+		</div>
+		<div class="info">
+			<div class="icon"></div>
+			<div class="text"></div>
+		</div>
+		<div class="info">
+			<div class="icon"></div>
+			<div class="text"></div>
+		</div>
+		<div class="info">
+			<div class="icon"></div>
+			<div class="text"></div>
+		</div>
+		<div class="info">
+			<div class="icon"></div>
+			<div class="text"></div>
+		</div>
+		<div class="info">
+			<div class="icon"></div>
+			<div class="text"></div>
+		</div>
+	</div>
+	</div>
+	<div class="p4">
+		<a href="{{ post.聯絡資訊 }}" target="_blank"><div class="more">MORE</div></a>
+	</div>
+<!--container--></div>
+<div id="footer">
+</div>
+</body>
+</html>
