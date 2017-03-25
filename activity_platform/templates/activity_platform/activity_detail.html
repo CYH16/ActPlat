@@ -4,11 +4,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>實驗網站</title>
+<script src="https://use.fontawesome.com/9ed2b9813e.js"></script>
 <link rel="stylesheet" href= {% static 'css/activity_detail.css' %} type="text/css" />
 <script type="text/javascript" src={% static 'js/jquery-3.1.1.min.js' %}></script>
 <script type="text/javascript" src={% static 'js/jquery.color-2.1.2.js' %}></script>
 <script type="text/javascript" src={% static 'js/menu2.js' %}></script>
 <script type="text/javascript" src={% static 'js/scroll.js' %}></script>
+<script type="text/javascript" src={% static 'js/replace.js' %}></script>
 </head>
 
 
@@ -23,6 +25,7 @@
 	<div class = "arrow-up"></div>
 	<div class = "arrow-up2"></div>
 </div>
+
 <div id="container">
 	<div class="p1">
 		<div class="title">
@@ -35,42 +38,53 @@
 		<div class="title2">
 			<div class="title_text2">簡介</div>
 		</div>
+		{% autoescape off %}
 		<div class="brief">
-			{{ post.簡介 }}
+			{{ post.簡介|linebreaksbr }}
 		</div>
+		{% endautoescape %}
 	</div>
 	<div class="p3">
+	
 	<div class="wrapper">
+	{% autoescape off %}
 		<div class="info">
-			<div class="icon"></div>
-			<div class="text"></div>
+			<div class="icon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+			<div class="text_date">
+				<div class="start_date">{{ post.開始日期與時間|date:"Y.m.d (D) H:i" }}</div>
+				<div>|</div>
+				<div class="end_date">{{ post.結束日期與時間|date:"Y.m.d (D) H:i" }}</div>
+			</div>
 		</div>
 		<div class="info">
-			<div class="icon"></div>
-			<div class="text"></div>
+			<div class="icon"><i class="fa fa-map-marker"></i></div>
+			<div class="text_location">{{ post.詳細地點|linebreaksbr }}</div>
 		</div>
 		<div class="info">
-			<div class="icon"></div>
-			<div class="text"></div>
+			<div class="icon"><i class="fa fa-usd" aria-hidden="true"></i></div>
+			<div class="text_fee">{{ post.詳細費用|linebreaksbr }}</div>
 		</div>
 		<div class="info">
-			<div class="icon"></div>
-			<div class="text"></div>
+			<div class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
+			<div class="text_for">{{ post.對象 }}</div>
 		</div>
 		<div class="info">
-			<div class="icon"></div>
-			<div class="text"></div>
+			<div class="icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+			<div class="text_limit">{{ post.人數限制 }}</div>
 		</div>
 		<div class="info">
-			<div class="icon"></div>
-			<div class="text"></div>
+			<div class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+			<div class="text_deadline">{{ post.報名死線|date:"m月d日 H:i截止" }}</div>
 		</div>
+	{% endautoescape %}
 	</div>
+	
 	</div>
 	<div class="p4">
-		<a href="{{ post.聯絡資訊 }}" target="_blank"><div class="more">MORE</div></a>
+		<a href="{{ post.聯絡資訊 }}" target="_blank"><div class="more"><i class="fa fa-info-circle"></i></div></a>
 	</div>
 <!--container--></div>
+
 <div id="footer">
 </div>
 </body>

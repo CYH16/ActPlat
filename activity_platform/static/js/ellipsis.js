@@ -8,7 +8,7 @@ $(function(){
     });
 });
 
-$(function(){
+/*$(function(){
     var len = 9; // 超過9個字以"..."取代
     $("#block > #more_info > p#location").each(function(i){
         if($(this).text().length>len){
@@ -16,4 +16,4 @@ $(function(){
             $(this).text(text);
         }
     });
-});
+});*/
