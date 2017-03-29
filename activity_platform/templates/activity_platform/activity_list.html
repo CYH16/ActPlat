@@ -19,6 +19,8 @@
 
 <body>
 <div id="intro">
+<script src={% static 'js/particles.js' %}></script>
+<script src={% static 'js/app.js' %}></script>
 <div id="notification">
 	<div id="lastupdate"><span>上次更新|&nbsp;</span><br>
 		&emsp;&emsp;&emsp;&emsp;&emsp;2017.03.25 13:30<br>
@@ -41,14 +43,14 @@
 
 <div id="head">
 	<ul>
-		<li class = "option">活動時間
+		<!--<li class = "option">活動時間
 			<ul class = "selection">
 				<li id = "1.1"><div id="selection_text">a</div><div id="slider"><div id="switch"></div></div></li>
 				<li id = "1.2"><div id="selection_text">b</div><div id="slider"><div id="switch"></div></div></li>
 				<li id = "1.3"><div id="selection_text">c</div><div id="slider"><div id="switch"></div></div></li>
 				<li id = "1.4"><div id="selection_text">d</div><div id="slider"><div id="switch"></div></div></li>
 			</ul>
-		</li>
+		</li>-->
 		<li class = "option">類型
 			<ul class = "selection">
 				<li id = "2.1"><div id="selection_text">學校活動</div><div id="slider"><div id="switch"></div></div></li>
@@ -58,7 +60,7 @@
 				<li id = "2.5"><div id="selection_text">其他</div><div id="slider"><div id="switch"></div></div></li>
 			</ul>
 		</li>
-		<li class = "option">類型
+		<li class = "option">性質
 			<ul class = "selection">
 				<li id = "3.1"><div id="selection_text">室內．學術</div><div id="slider"><div id="switch"></li>
 				<li id = "3.2"><div id="selection_text">室內．休閒</div><div id="slider"><div id="switch"></li>
@@ -170,6 +172,9 @@
 	<!--content--></div>
 <!--container--></div>
 <div id="footer">
+	<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSewtGW6lKVvS1dvGQ-m54w1GTy6TN6BDE_JF2FXnutTS38OZg/viewform">
+		<div id="icon_contact"><i class="fa fa-envelope-o" aria-hidden="true"></i><div id="contact">給點回饋</div></div>
+	<a>
 </div>
 </body>
 </html>

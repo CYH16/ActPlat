@@ -13,7 +13,7 @@ $(function(){
 		$('.p3 > .wrapper').stop().fadeIn();
 	}
 　　if((limit)<this_Top && this_Top<=(limit*2)){
-		$('.p2 > .brief').animate({left: "32.5%"});
+		$('.p2  > .brief_text').animate({left: "40%"});
 	}
 　　if((limit*3)<this_Top && this_Top<=(limit*4)){
 		$('.p4 > a > .more').stop().fadeIn();

@@ -52,7 +52,7 @@
 	{% autoescape off %}
 		<div class="info">
 			<div class="icon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
-			<div class="info_title">活 動 日 期</div>
+			<div class="info_title">活動日期</div>
 			<div class="info_line"></div>
 			<div class="text_date">
 				<div class="start_date">{{ post.開始日期與時間|date:"Y.m.d (D) H:i" }}</div>
@@ -62,29 +62,33 @@
 		</div>
 		<div class="info">
 			<div class="icon"><i class="fa fa-map-marker"></i></div>
-			<div class="info_title">活 動 地 點</div>
+			<div class="info_title">活動地點</div>
 			<div class="info_line"></div>
 			<div class="text_location">{{ post.詳細地點|linebreaksbr }}</div>
 		</div>
 		<div class="info">
 			<div class="icon"><i class="fa fa-usd" aria-hidden="true"></i></div>
-			<div class="info_title">活 動 費 用</div>
+			<div class="info_title">活動費用</div>
 			<div class="info_line"></div>
 			<div class="text_fee">{{ post.詳細費用|linebreaksbr }}</div>
 		</div>
 		<div class="info">
-			<div class="icon"><i class="fa fa-user" aria-hidden="true"></i></div>
-			<div class="info_title">活 動 對 象</div>
+			<div class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
+			<div class="info_title">活動對象</div>
 			<div class="info_line"></div>
 			<div class="text_for">{{ post.對象 }}</div>
 		</div>
-		<div class="add_info">
-			<div class="limit">
-				人 數 限 制&emsp;|&emsp;{{ post.人數限制 }}
-			</div>
-			<div class="deadline">
-				報 名 截 止&emsp;|&emsp;<span>{{ post.報名死線|date:"m/d H:i" }}</span>
-			</div>
+		<div class="info">
+			<div class="icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+			<div class="info_title">人數限制</div>
+			<div class="info_line"></div>
+			<div class="text_limit">{{ post.人數限制 }}</div>
+		</div>
+		<div class="info">
+			<div class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+			<div class="info_title">報名死線</div>
+			<div class="info_line"></div>
+			<div class="text_deadline">{{ post.報名死線|date:"m月d日 H:i截止" }}</div>
 		</div>
 	{% endautoescape %}
 	</div>

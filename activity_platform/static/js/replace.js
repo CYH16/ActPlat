@@ -37,9 +37,9 @@ $(function(){
 			$(this).html("<span style='font-size:15px;height:40px;line-height:40px;'>不須報名</span>");
 		}
 	});
-	$(".p3 > .wrapper > .info > .text_deadline").each(function(i){
+	$(".p3 > .wrapper > .add_info > .deadline > span").each(function(i){
 		if($(this).html()==""){
-			$(this).html("不須報名");
+			$(this).html("不 須 報 名");
 		}
 	});
 });

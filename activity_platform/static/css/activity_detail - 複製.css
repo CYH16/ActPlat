@@ -85,10 +85,10 @@ div#head ul li span{
 	height: 75%;
 	width: 100%;
 	position: absolute;
-	animation: appear 1s;
-	-moz-animation: appeart 1s;
-	-webkit-animation: appear 1s;
-	-o-animation: appear 1s;
+	animation: from_right 1s;
+	-moz-animation: from_right 1s;
+	-webkit-animation: from_right 1s;
+	-o-animation: from_right 1s;
 }
 
 img{
@@ -109,10 +109,6 @@ img{
 	font-size: 60px;
 	font-weight: bolder;
 	text-shadow: 0 0 10px rgb(15,24,43);
-	animation: appear 1s;
-	-moz-animation: appeart 1s;
-	-webkit-animation: appear 1s;
-	-o-animation: appear 1s;
 }
 
 .title_subtext{
@@ -127,10 +123,6 @@ img{
 	color: rgba(240, 255, 255, 1);
 	font-size: 30px;
 	text-shadow: 0 0 10px rgb(15,24,43);
-	animation: appear 1s;
-	-moz-animation: appeart 1s;
-	-webkit-animation: appear 1s;
-	-o-animation: appear 1s;
 }
 
 .title_line{
@@ -140,10 +132,6 @@ img{
 	left: 50%;
 	margin-left: -25px;
 	border-top: 5px solid rgba(240, 255, 255, 1);
-	animation: appear 1s;
-	-moz-animation: appeart 1s;
-	-webkit-animation: appear 1s;
-	-o-animation: appear 1s;
 }
 
 .title_date{
@@ -158,34 +146,54 @@ img{
 	color: rgba(240, 255, 255, 1);
 	font-size: 20px;
 	text-shadow: 0 0 10px rgb(15,24,43);
-	animation: appear 1s;
-	-moz-animation: appeart 1s;
-	-webkit-animation: appear 1s;
-	-o-animation: appear 1s;
 }
 
-@keyframes appear
+@keyframes from_right
 {
-from {opacity: 0;}
-to {opacity: 1;}
+from {left: -100%;}
+to {left: 0;}
 }
 
-@-moz-keyframes appear /* Firefox */
+@-moz-keyframes from_right /* Firefox */
 {
-from {opacity: 0;}
-to {opacity: 1;}
+from {left: -100%;}
+to {left: 0;}
 }
 
-@-webkit-keyframes appear /* Safari 和 Chrome */
+@-webkit-keyframes from_right /* Safari 和 Chrome */
 {
-from {opacity: 0;}
-to {opacity: 1;}
+from {left: -100%;}
+to {left: 0;}
 }
 
-@-o-keyframes appear /* Opera */
+@-o-keyframes from_right /* Opera */
 {
-from {opacity: 0;}
-to {opacity: 1;}
+from {left: -100%;}
+to {left: 0;}
+}
+
+@keyframes from_left
+{
+from {right: -100%;}
+to {right: 0;}
+}
+
+@-moz-keyframes from_left /* Firefox */
+{
+from {right: -100%;}
+to {right: 0;}
+}
+
+@-webkit-keyframes from_left /* Safari 和 Chrome */
+{
+from {right: -100%;}
+to {right: 0;}
+}
+
+@-o-keyframes from_left /* Opera */
+{
+from {right: -100%;}
+to {right: 0;}
 }
 
 /*p2*/
@@ -226,44 +234,43 @@ to {opacity: 1;}
 
 /*p3*/
 .wrapper{
-	height: 450px;
-	width: 1000px;
+	height: 80%;
+	width: 70%;
 	background: rgba(1, 1, 1, 0);
 	position: absolute;
-	left: 50%;
-	margin-left: -500px;
+	left: 15%;
 	top: 15%;
 	display: none;
 }
 
 .info{
 	height: 40%;
-	width: 230px;
+	width: 30%;
 	float: left;
-	margin: 50px 10px 60px;
+	margin: 10px 1.5% 60px;
 	background: rgba(1, 1, 1, 0);
 	position: relative;
 }
 
 .icon{
-	height: 90px;
-	width: 90px;
+	height: 70px;
+	width: 70px;
 	top: 0;
 	left: 50%;
-	margin-left: -50px;
+	margin-left: -40px;
 	background: rgba(1, 1, 1, 0);
 	position: absolute;
 	color: rgba(240, 255, 255, 1);
-	font-size: 60px;
+	font-size: 50px;
 	border-radius: 60%;
 	border: 5px solid rgba(240, 255, 255, 1);
 }	
 
 .info_title{
-	width: 120px;
-	top: 130px;
+	width: 100px;
+	top: 85px;
 	left: 50%;
-	margin-left: -60px;
+	margin-left: -50px;
 	position: absolute;
 	color: rgba(240, 255, 255, 1);
 	font-size: 25px;
@@ -272,63 +279,23 @@ to {opacity: 1;}
 
 .info_line{
 	width: 30px;
-	top: 185px;
+	top: 135px;
 	left: 50%;
 	margin-left: -15px;
 	position: absolute;
 	border: 3px solid rgba(240, 255, 255, 1);
 }
 
-.text_date, .text_location, .text_fee, .text_for{
+.text_date, .text_location, .text_fee, .text_for, .text_limit, .text_deadline{
 	height: 80px;
-	width: 200px;
-	top: 225px;
+	width: 240px;
+	top: 160px;
 	left: 50%;
-	margin-left: -100px;
+	margin-left: -120px;
 	background: rgba(1, 1, 1, 0);
 	position: absolute;
 	color: rgba(240, 255, 255, 1);
 	font-size: 16px;
-}
-
-.add_info{
-	height: 50px;
-	width: 700px;
-	bottom: 0;
-	left: 50%;
-	margin-left: -350px;
-	background: rgba(1, 1, 1, 0);
-	position: absolute;
-}
-
-.limit{
-	position: absolute;
-	height: 50px;
-	line-height: 50px;
-	width: 400px;
-	bottom: 0;
-	left: 0;
-	background: rgba(1, 1, 1, 0);
-	position: absolute;
-	text-align: left;
-	color: rgba(240, 255, 255, .5);
-	font-size: 25px;
-	font-weight: bolder;
-}
-
-.deadline{
-	position: absolute;
-	height: 50px;
-	line-height: 50px;
-	width: 400px;
-	bottom: 0;
-	left: 400px;
-	background: rgba(1, 1, 1, 0);
-	position: absolute;
-	text-align: left;
-	color: rgba(240, 255, 255, .5);
-	font-size: 25px;
-	font-weight: bolder;
 }
 
 /*p4*/
