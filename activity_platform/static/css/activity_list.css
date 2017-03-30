@@ -44,14 +44,14 @@ span{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-top: -120px;
-	margin-left: -120px;
-	height: 160px;
-	width: 160px;
+	margin-top: -50px;
+	margin-left: -50px;
+	height: 80px;
+	width: 80px;
 	border-radius: 50%;
-	border: 40px solid rgb(15,24,43);
-	border-right: 40px solid rgba(240, 255, 255, 1);
-	border-left: 40px solid rgba(240, 255, 255, 1);
+	border: 20px solid rgb(15,24,43);
+	border-right: 20px solid rgba(240, 255, 255, 1);
+	border-left: 20px solid rgba(240, 255, 255, 1);
 	-webkit-animation: loading 2s infinite linear;
 	-moz-animation: loading 2s infinite linear;
 }
@@ -77,13 +77,18 @@ span{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-top: -100px;
-	margin-left: -100px;
-	height: 200px;
-	width: 200px;
+	margin-top: -150px;
+	margin-left: -150px;
+	height: 300px;
+	width: 300px;
 	background: white;
 	display: none;
-	background: rgba(240, 255, 255, 1);
+	background: rgba(240, 255, 255, 0);
+}
+
+#welcome img{
+	height: 300px;
+	width: 300px;
 }
 
 #godown{
@@ -359,6 +364,11 @@ div#head ul li ul.selection{
 	color: rgb(15,24,43);
 	height: 60px;
 	padding: 0 20px;
+}
+
+#icon_contact img{
+	height: 60px;
+	width: 60px;
 }
 
 #contact{
