@@ -193,6 +193,7 @@ to {opacity: 1;}
 	height: 70%;
 	width: 1em;
 	background: rgba(1, 1, 1, ,.5);
+	color: rgb(15,24,43);
 	position: absolute;
 	right: 70%;
 	top: 25%;
@@ -417,16 +418,11 @@ to {opacity: 1;}
 	padding: 0 20px;
 }
 
-#icon_contact img{
-	height: 60px;
-	width: 60px;
-}
-
 #contact{
 	font-size: 12px;
 	font-weight: bold;
 }
 
-.fa-envelope-o{
+.fa-envelope-o, .fa-question, .fa-facebook-square, .fa-home{
 	font-size: 40px;
 }

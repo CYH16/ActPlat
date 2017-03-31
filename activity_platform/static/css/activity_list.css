@@ -366,16 +366,11 @@ div#head ul li ul.selection{
 	padding: 0 20px;
 }
 
-#icon_contact img{
-	height: 60px;
-	width: 60px;
-}
-
 #contact{
 	font-size: 12px;
 	font-weight: bold;
 }
 
-.fa-envelope-o{
+.fa-envelope-o, .fa-question, .fa-facebook-square, .fa-home{
 	font-size: 40px;
 }

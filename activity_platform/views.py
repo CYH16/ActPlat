@@ -11,3 +11,6 @@ def activity_list(request):
 def activity_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'activity_platform/activity_detail.html', {'post': post})
+	
+def activity_about(request):
+    return render(request, 'activity_platform/activity_about.html', {})

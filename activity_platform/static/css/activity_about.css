@@ -1,0 +1,355 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-family: Microsoft JhengHei;
+}
+
+.p1{
+	height: 101vh;
+	background:rgb(15,24,43);
+	position: relative;
+	overflow: hidden;
+}
+
+.p2{
+	height: 85vh;
+	background: rgba(240, 255, 255, 1);
+	position: relative;
+	overflow: hidden;
+}
+
+.p3{
+	height: 90vh;
+	background: rgba(240, 255, 255, 1);
+	position: relative;
+}
+
+.p4{
+	height: 75vh;
+	background: rgba(240, 255, 255, 1);
+	position: relative;
+	overflow: hidden;
+}
+
+.p5{
+	height: 101vh;
+	background:rgb(15,24,43);
+	position: relative;
+	overflow: hidden;
+}
+
+.p6{
+	height: 101vh;
+	background: rgba(240, 255, 255, 1);
+	position: relative;
+	overflow: hidden;
+}
+
+/*導覽列*/
+#head{
+	background: rgba(255, 255, 255, 0);
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 99;
+	color: rgb(15,24,43);
+}
+
+div#head ul li{
+	width: 24vw;
+	height: 60px;
+	line-height: 60px;
+	background: rgba(240, 255, 255, 0);
+	float: left;
+	list-style-type: none;
+}
+
+div#head ul li span{
+	cursor: pointer;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+.arrow-up {
+    width:0px; height:0px; border:10px solid; border-color:rgba(240, 255, 255, 1) transparent transparent transparent;/
+    border-style:dashed dashed solid dashed;
+	position: absolute;
+    top: 5px;
+	left: 11.5%;
+}
+.arrow-up2 {
+    width:0px; height:0px; border:10px solid; border-color:rgb(15,24,43) transparent transparent transparent;/
+    border-style:dashed dashed solid dashed;
+	position: absolute;
+    top: 5px;
+	left: 11.5%;
+}
+
+/*p1*/
+.title1{
+	height: 70%;
+	width: 1em;
+	background: rgba(1, 1, 1, ,.5);
+	position: absolute;
+	right: 70%;
+	top: 25%;
+	font-size: 60px;
+	font-weight: bolder;
+	color: rgba(240, 255, 255, 1);
+}
+
+.title1_line{
+	height: 60px;
+	width: 1em;
+	position: absolute;
+	right: 65%;
+	top: 48%;
+	font-size: 60px;
+	border-right: 5px solid rgba(240, 255, 255, 1);
+}
+
+.title1_text{
+	height: 48%;
+	width: 50%;
+	background: rgba(1, 1, 1, 0);
+	position: absolute;
+	left: 40%;
+	top: 40%;
+	color: rgba(240, 255, 255, 1);
+	text-align: left;
+	padding: 10px 0 0 0;
+	font-size: 25px;
+	overflow: hidden;
+	animation: appear 1s;
+	-moz-animation: appeart 1s;
+	-webkit-animation: appear 1s;
+	-o-animation: appear 1s;
+}
+
+/*p2*/
+.title2{
+	height: 70%;
+	width: 1em;
+	background: rgba(1, 1, 1, ,.5);
+	position: absolute;
+	right: 70%;
+	top: 25%;
+	font-size: 60px;
+	font-weight: bolder;
+	color: rgb(15,24,43);
+}
+
+.title2_line{
+	height: 60px;
+	width: 1em;
+	position: absolute;
+	right: 65%;
+	top: 35%;
+	font-size: 60px;
+	border-right: 5px solid rgb(15,24,43);
+}
+
+.title2_text{
+	height: 85%;
+	width: 50%;
+	background: rgba(1, 1, 1, 0);
+	position: absolute;
+	left: 100%;
+	top: 25%;
+	color: rgb(15,24,43);
+	text-align: left;
+	padding: 10px 0 0 0;
+	font-size: 25px;
+	overflow: hidden;
+}
+
+/*p3*/
+.title3{
+	height: 1em;
+	background: rgba(1, 1, 1, ,.5);
+	position: absolute;
+	left: 40%;
+	top: 0;
+	font-size: 60px;
+	color: rgb(15,24,43);
+	display: none;
+}
+
+.wrapper{
+	height: 450px;
+	width: 1000px;
+	background: rgba(1, 1, 1, 0);
+	position: absolute;
+	left: 50%;
+	margin-left: -500px;
+	top: 15%;
+}
+
+.info{
+	height: 40%;
+	width: 230px;
+	float: left;
+	margin: 50px 10px 60px;
+	background: rgba(1, 1, 1, 0);
+	position: relative;
+}
+
+.icon{
+	height: 90px;
+	width: 90px;
+	top: 0;
+	left: 50%;
+	margin-left: -50px;
+	background: rgba(1, 1, 1, 0);
+	position: absolute;
+	color: rgb(15,24,43);
+	font-size: 60px;
+	border-radius: 60%;
+	border: 5px solid rgb(15,24,43);
+}	
+
+.info_title{
+	width: 120px;
+	top: 130px;
+	left: 50%;
+	margin-left: -60px;
+	position: absolute;
+	color: rgb(15,24,43);
+	font-size: 25px;
+	font-weight: bolder;
+}
+
+.info_line{
+	width: 30px;
+	top: 185px;
+	left: 50%;
+	margin-left: -15px;
+	position: absolute;
+	border: 3px solid rgb(15,24,43);
+}
+
+.text_date, .text_location, .text_fee, .text_for{
+	height: 80px;
+	width: 150px;
+	top: 225px;
+	left: 50%;
+	margin-left: -75px;
+	background: rgba(1, 1, 1, 0);
+	position: absolute;
+	color: rgb(15,24,43);
+	font-size: 16px;
+	text-align: left;
+}
+
+.title3_2{
+	height: 1em;
+	background: rgba(1, 1, 1, ,.5);
+	position: absolute;
+	left: 40%;
+	bottom: 10px;
+	font-size: 60px;
+	color: rgb(15,24,43);
+	display: none;
+}
+
+/*p5*/
+.title5{
+	height: 70%;
+	width: 1em;
+	background: rgba(1, 1, 1, ,.5);
+	position: absolute;
+	right: 70%;
+	top: 25%;
+	font-size: 60px;
+	font-weight: bolder;
+	color: rgba(240, 255, 255, 1);
+}
+
+.title5_line{
+	height: 60px;
+	width: 1em;
+	position: absolute;
+	right: 65%;
+	top: 35%;
+	font-size: 60px;
+	border-right: 5px solid rgba(240, 255, 255, 1);
+}
+
+.title5_text{
+	height: 85%;
+	width: 50%;
+	background: rgba(1, 1, 1, 0);
+	position: absolute;
+	left: 100%;
+	top: 25%;
+	color: rgba(240, 255, 255, 1);
+	text-align: left;
+	padding: 10px 0 0 0;
+	font-size: 25px;
+	overflow: hidden;
+}
+
+/*p6*/
+.title6{
+	height: 70%;
+	width: 1em;
+	background: rgba(1, 1, 1, ,.5);
+	position: absolute;
+	right: 70%;
+	top: 25%;
+	font-size: 60px;
+	font-weight: bolder;
+	color: rgb(15,24,43);
+}
+
+.title6_line{
+	height: 60px;
+	width: 1em;
+	position: absolute;
+	right: 65%;
+	top: 35%;
+	font-size: 60px;
+	border-right: 5px solid rgb(15,24,43);
+}
+
+.title6_text{
+	height: 85%;
+	width: 50%;
+	background: rgba(1, 1, 1, 0);
+	position: absolute;
+	left: 100%;
+	top: 25%;
+	color: rgb(15,24,43);
+	text-align: left;
+	padding: 10px 0 0 0;
+	font-size: 25px;
+	overflow: hidden;
+}
+
+/*底部*/
+#footer{
+	border-top: 2px solid rgb(15,24,43);
+	background: rgba(240, 255, 255, 1);
+	height: 60px;
+	width: 100%;
+	clear: both;
+}
+
+#icon_contact{
+	float: right;
+	display: inline-block;
+	color: rgb(15,24,43);
+	height: 60px;
+	padding: 0 20px;
+}
+
+#contact{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.fa-envelope-o, .fa-question, .fa-facebook-square, .fa-home{
+	font-size: 40px;
+}
