@@ -5,7 +5,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="keywords" content="網頁關鍵字">	
-<title>實驗網站</title>
+<title>ActPlat - 關於我們</title>
 <link rel="SHORTCUT ICON" href={% static 'image/just_logo.png' %}>
 
 <script src="https://use.fontawesome.com/9ed2b9813e.js"></script>
@@ -14,6 +14,7 @@
 <script type="text/javascript" src={% static 'js/jquery.color-2.1.2.js' %}></script>
 <script type="text/javascript" src={% static 'js/menu3.js' %}></script>
 <script type="text/javascript" src={% static 'js/scroll3.js' %}></script>
+<script type="text/javascript" src={% static 'js/godown3.js' %}></script>
 </head>
 
 
@@ -42,9 +43,9 @@
 		</div>
 	</div>
 	<div class="p2">
-		<div class="title2">故事</div>
+		<div class="title2">說個故事</div>
 		<div class="title2_line"></div>
-		
+		<div class="title2_line2"></div>
 		<div class="title2_text">
 		很有很久以前有一個邊緣人<br>
 		常常發現他有興趣、想要參加的活動<br>
@@ -54,13 +55,18 @@
 		於是想要做一個活動平台<br>
 		讓即使是邊邊的他也能掌握陽明大大小小活動的資訊<br><br>
 		
-		在陽明不管是宣傳活動或是知道有這個活動<br>
+		在陽明<br>
+		不管是宣傳活動或是知道有這個活動<br>
 		不外乎透過FB宣傳、口耳相傳、喊聲、張貼海報等等方式<br>
+		但是......
 		</div>
-
+		<img src={% static 'image/down_arrow_dark.png' %}>
 	</div>
 	<div class="p3">
-	<div class="title3">不過......</div>
+	<div class="anchor"></div>
+	<img class="qm" src={% static 'image/qm.png' %}>
+	<div class="title3">各 種 宣 傳 的 缺 點</div>
+	<div class="title3_1">至 少 我 看 到 的 啦</div>
 	<div class="wrapper">
 		
 		<div class="info">
@@ -88,14 +94,19 @@
 			<div class="text_for">．有時效果不佳<br>．資訊太多太雜亂</div>
 		</div>
 	</div>
-	<div class="title3_2">因此......</div>
+	<div class="title3_line"></div>
+	<div class="title3_text">
+		導致不管是宣傳活動或是找活動效果都不太好<br>
+		所以......
+	</div>
+	<img class="godown" src={% static 'image/down_arrow_dark.png' %}>
 	</div>
 	<div class="p4">
-		<div class="title2">夢想</div>
+		<div class="title4">希望</div>
 		<div class="title2_line"></div>
 		
 		<div class="title2_text">
-		用極其粗淺的程式能力架了這個網站<br>
+		於是用粗淺的程式能力架了這個網站<br>
 		希望<br>
 		能夠讓想要尋找活動的人快速地找到有興趣的活動<br>
 		能夠讓想要宣傳活動的人有效地傳達給大家知道
@@ -120,29 +131,32 @@
 		<div class="title6_line"></div>
 		
 		<div class="title6_text">
-		感謝某陳姓同學擔任設計專屬顧問<br>
+		感謝某陳姓同學擔任設計顧問<br>
 		感謝某林姓同學持續給我動力<br>
 		感謝某劉姓同學一直在嘴砲<br>
 		感謝看到這邊的你們<br>
 		希望這網站讓你有機會接觸更多不同於自己生活圈的事物
 		</div>
+		
+	<div id="footer">
+		<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSewtGW6lKVvS1dvGQ-m54w1GTy6TN6BDE_JF2FXnutTS38OZg/viewform">
+			<div id="icon_contact"><i class="fa fa-envelope-o" aria-hidden="true"></i><div id="contact">給點回饋</div></div>
+		</a>
+		<a target="_blank" href="https://www.facebook.com/ActPlat">
+			<div id="icon_contact"><i class="fa fa-facebook-square" aria-hidden="true"></i><div id="contact">臉書專頁</div></div>
+		</a>
+		<a target="_blank" href="{% url 'activity_about' %}">
+			<div id="icon_contact"><i class="fa fa-question" aria-hidden="true"></i><div id="contact">關於我們</div></div>
+		</a>
+		<a href="/">
+			<div id="icon_contact"><i class="fa fa-home" aria-hidden="true"></i><div id="contact">網站首頁</div></div>
+		</a>
+	</div>	
+	
 	</div>
 	
 <!--container--></div>
 
-<div id="footer">
-	<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSewtGW6lKVvS1dvGQ-m54w1GTy6TN6BDE_JF2FXnutTS38OZg/viewform">
-		<div id="icon_contact"><i class="fa fa-envelope-o" aria-hidden="true"></i><div id="contact">給點回饋</div></div>
-	</a>
-	<a target="_blank" href="">
-		<div id="icon_contact"><i class="fa fa-facebook-square" aria-hidden="true"></i><div id="contact">臉書專頁</div></div>
-	</a>
-	<a target="_blank" href="{% url 'activity_about' %}">
-		<div id="icon_contact"><i class="fa fa-question" aria-hidden="true"></i><div id="contact">關於我們</div></div>
-	</a>
-	<a href="/">
-		<div id="icon_contact"><i class="fa fa-home" aria-hidden="true"></i><div id="contact">網站首頁</div></div>
-	</a>
-</div>
+
 </body>
 </html>

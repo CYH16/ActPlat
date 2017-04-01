@@ -13,20 +13,20 @@
 }
 
 .p2{
-	height: 85vh;
+	height: 101vh;
 	background: rgba(240, 255, 255, 1);
 	position: relative;
 	overflow: hidden;
 }
 
 .p3{
-	height: 90vh;
+	height: 100vh;
 	background: rgba(240, 255, 255, 1);
 	position: relative;
 }
 
 .p4{
-	height: 75vh;
+	height: 50vh;
 	background: rgba(240, 255, 255, 1);
 	position: relative;
 	overflow: hidden;
@@ -115,17 +115,12 @@ div#head ul li span{
 	width: 50%;
 	background: rgba(1, 1, 1, 0);
 	position: absolute;
-	left: 40%;
+	left: 100%;
 	top: 40%;
 	color: rgba(240, 255, 255, 1);
 	text-align: left;
 	padding: 10px 0 0 0;
 	font-size: 25px;
-	overflow: hidden;
-	animation: appear 1s;
-	-moz-animation: appeart 1s;
-	-webkit-animation: appear 1s;
-	-o-animation: appear 1s;
 }
 
 /*p2*/
@@ -135,7 +130,7 @@ div#head ul li span{
 	background: rgba(1, 1, 1, ,.5);
 	position: absolute;
 	right: 70%;
-	top: 25%;
+	top: 12%;
 	font-size: 60px;
 	font-weight: bolder;
 	color: rgb(15,24,43);
@@ -152,7 +147,7 @@ div#head ul li span{
 }
 
 .title2_text{
-	height: 85%;
+	height: 75%;
 	width: 50%;
 	background: rgba(1, 1, 1, 0);
 	position: absolute;
@@ -165,14 +160,85 @@ div#head ul li span{
 	overflow: hidden;
 }
 
+.p2 img{
+	height: 20px;
+	width: auto;
+	position: absolute;
+	top: 90%;
+	left: 48%;
+	-webkit-animation-duration: .8s;
+	-moz-animation-duration: .8s;
+	-webkit-animation-name: bounce1;
+	-moz-animation-name: bounce1;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	cursor: pointer;
+	display: none;
+}
+
+@-webkit-keyframes bounce1 {
+  0%{
+    top: 89%;
+  }
+  50%{
+	top: 90%;
+  }
+  100%{
+    top: 89%;
+  }
+}
+
+@moz-keyframes bounce1 {
+  0%{
+    top: 89%;
+  }
+  50%{
+	top: 90%;
+  }
+  100%{
+    top: 89%;
+  }
+}
+
+.title2_line2{
+	height: 60px;
+	width: 1em;
+	position: absolute;
+	right: 65%;
+	top: 78%;
+	font-size: 60px;
+	border-right: 5px solid rgb(15,24,43);
+}
+
 /*p3*/
+.p3 img.qm{
+	height: 105px;
+	width: auto;
+	position: absolute;
+	top: 12%;
+	left: 20%;
+	display: none;
+}
+
 .title3{
 	height: 1em;
 	background: rgba(1, 1, 1, ,.5);
 	position: absolute;
-	left: 40%;
-	top: 0;
-	font-size: 60px;
+	left: 33.3%;
+	top: 12%;
+	font-size: 50px;
+	color: rgb(15,24,43);
+	display: none;
+	font-weight: bold;
+}
+
+.title3_1{
+	height: 1em;
+	background: rgba(1, 1, 1, ,.5);
+	position: absolute;
+	left: 34%;
+	top: 23%;
+	font-size: 15px;
 	color: rgb(15,24,43);
 	display: none;
 }
@@ -184,7 +250,8 @@ div#head ul li span{
 	position: absolute;
 	left: 50%;
 	margin-left: -500px;
-	top: 15%;
+	top: 22%;
+	display: none;
 }
 
 .info{
@@ -243,15 +310,88 @@ div#head ul li span{
 	text-align: left;
 }
 
-.title3_2{
+.title3_line{
+	height: 60px;
+	width: 1em;
+	position: absolute;
+	right: 65%;
+	top: 87%;
+	font-size: 60px;
+	border-right: 5px solid rgb(15,24,43);
+	display: none;
+}
+
+.title3_text{
 	height: 1em;
 	background: rgba(1, 1, 1, ,.5);
 	position: absolute;
 	left: 40%;
-	bottom: 10px;
-	font-size: 60px;
+	top: 86.5%;
+	font-size: 25px;
 	color: rgb(15,24,43);
+	text-align: left;
 	display: none;
+}
+
+.p3 img.godown{
+	height: 20px;
+	width: auto;
+	position: absolute;
+	top: 94%;
+	left: 48%;
+	-webkit-animation-duration: .8s;
+	-moz-animation-duration: .8s;
+	-webkit-animation-name: bounce2;
+	-moz-animation-name: bounce2;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	cursor: pointer;
+	display: none;
+}
+
+@-webkit-keyframes bounce2 {
+  0%{
+    top: 93%;
+  }
+  50%{
+	top: 94%;
+  }
+  100%{
+    top: 93%;
+  }
+}
+
+@moz-keyframes bounce2 {
+  0%{
+    top: 93%;
+  }
+  50%{
+	top: 94%;
+  }
+  100%{
+    top: 93%;
+  }
+}
+
+.anchor{
+	height:10px;
+	width: 10px;
+	position: absolute;
+	bottom: 290px;
+	background: rgba(240, 255, 255, 1);
+}
+
+/*p4*/
+.title4{
+	height: 70%;
+	width: 1em;
+	background: rgba(1, 1, 1, ,.5);
+	position: absolute;
+	right: 70%;
+	top: 18%;
+	font-size: 60px;
+	font-weight: bolder;
+	color: rgb(15,24,43);
 }
 
 /*p5*/
@@ -335,6 +475,8 @@ div#head ul li span{
 	height: 60px;
 	width: 100%;
 	clear: both;
+	position: absolute;
+	bottom: 0;
 }
 
 #icon_contact{
@@ -343,6 +485,10 @@ div#head ul li span{
 	color: rgb(15,24,43);
 	height: 60px;
 	padding: 0 20px;
+}
+
+#icon_contact:hover {
+	color: rgba(15,24,43,.5);
 }
 
 #contact{
