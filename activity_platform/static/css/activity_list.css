@@ -283,7 +283,7 @@ div#head ul li ul.selection{
 	width: 380px;
 	padding: 0 15px;
 	text-align: left;
-	color: rgba(240, 255, 255, .4);
+	color: rgba(240, 255, 255, 1);
 }
 
 /*簡介*/
@@ -375,6 +375,6 @@ div#head ul li ul.selection{
 	font-weight: bold;
 }
 
-.fa-envelope-o, .fa-question, .fa-facebook-square, .fa-home{
+.fa-envelope-o, .fa-question, .fa-facebook-square, .fa-home, .fa-bullseye{
 	font-size: 40px;
 }

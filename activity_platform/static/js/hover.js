@@ -9,7 +9,7 @@ $(function(){
 	function(){
 		$(this).css("background","rgba(240, 255, 255, 0)");
 		$(this).css("color","rgba(240, 255, 255, 1)");
-		$(this).children(".text").children("#time").css("color","rgba(240, 255, 255, .4)");
+		$(this).children(".text").children("#time").css("color","rgba(240, 255, 255, 1)");
 		$(this).children(".text").children("#brief").css("color","rgba(240, 255, 255, .4)");
 	});
 });
