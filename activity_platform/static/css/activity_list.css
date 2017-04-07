@@ -251,8 +251,9 @@ div#head ul li ul.selection{
 
 .image img{
 	position: relative;
-	width: 380px;
-	max-height: 140px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*名稱與時間*/
