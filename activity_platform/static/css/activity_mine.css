@@ -141,8 +141,12 @@ ul.right{
 	padding-top: 10px;
 }
 
+#title{
+	position: relative;
+}
+
 #title_text{
-	width: 330px;
+	width: 280px;
 	height: 35px;
 	margin: 0;
 	font-size: 25px;
@@ -152,12 +156,17 @@ ul.right{
 	overflow:hidden;
 	white-space: nowrap;
 	text-overflow : ellipsis;
+	position: relative;
 }
 
 #like_count{
-	width: 35px;
+	width: 50px;
 	height: 35px;
-	float: right;
+	line-height: 35px;
+	font-size: 20px;
+	position: absolute;
+	right: 10px;
+	bottom: 0;
 }
 
 .fa-heart-o{
