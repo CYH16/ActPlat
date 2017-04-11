@@ -26,3 +26,11 @@ class Post(models.Model):
 
     def __str__(self):
         return self.活動名稱
+		
+class Like(models.Model):
+    user = models.CharField(max_length=20, blank=True)
+    #user = models.ManyToManyField(User)
+    post = models.ManyToManyField(Post)
+    
+    def __str__(self):
+        return self.user

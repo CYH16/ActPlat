@@ -1,0 +1,95 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: rgb(15,24,43);
+	text-align: center;
+	font-family: Microsoft JhengHei;
+}
+
+/*主要內容*/
+#container{
+	background: rgb(15,24,43);
+	height: 100vh;
+}
+
+#block{
+	background: rgb(15,24,43);
+	width: 396px;
+	height: 396px;
+	margin-left: -200px;
+	margin-top: -250px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	border: 2px solid rgba(240, 255, 255, 1);
+	color: rgba(240, 255, 255, 1);
+}
+
+form{
+	background: rgb(15,24,43);
+	width: 300px;
+	height: 100px;
+	margin-left: -150px;
+	margin-top: -50px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	color: rgba(240, 255, 255, 1);
+	font-size: 20px;
+	font-weight: bold;
+}
+
+input[type=text], input[type=password]{
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 15px;
+}
+
+input[type=submit], input[type=button]{
+	padding-top:10px;
+	margin-left:10px;
+	color: rgba(240, 255, 255, 1);
+	background: rgba(240, 255, 255, 0);
+	border: rgba(240, 255, 255, 0);
+	font-family: Microsoft JhengHei;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/*底部*/
+#footer{
+	background: rgba(240, 255, 255, .95);
+	height: 60px;
+	width: 100%;
+	clear: both;
+	position: absolute;
+	bottom: 0;
+}
+
+#footer:hover{
+	background: rgba(240, 255, 255, 1);
+}
+
+#icon_contact{
+	float: right;
+	color: rgb(15,24,43);
+	height: 60px;
+	padding: 0 20px;
+}
+
+#icon_contact:hover {
+	color: rgba(15,24,43,.5);
+}
+
+#contact{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.fa-envelope-o, .fa-question, .fa-facebook-square, .fa-home, .fa-bullseye{
+	font-size: 40px;
+}

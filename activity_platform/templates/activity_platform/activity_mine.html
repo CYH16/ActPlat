@@ -5,16 +5,14 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="keywords" content="網頁關鍵字">	
-<title>ActPlat - 首頁</title>
+<title>ActPlat - 我的活動</title>
 <link rel="SHORTCUT ICON" href={% static 'image/just_logo.png' %}>
 
 <script src="https://use.fontawesome.com/f4d3a939e1.js"></script>
-<link rel="stylesheet" href={% static 'css/activity_list.css' %} type="text/css" />
+<link rel="stylesheet" href={% static 'css/activity_mine.css' %} type="text/css" />
 <script type="text/javascript" src={% static 'js/jquery-3.1.1.min.js' %}></script>
 <script type="text/javascript" src={% static 'js/ellipsis.js' %}></script>
-<script type="text/javascript" src={% static 'js/godown.js' %}></script>
-<script type="text/javascript" src={% static 'js/loading.js' %}></script>
-<script type="text/javascript" src={% static 'js/menu.js' %}></script>
+<script type="text/javascript" src={% static 'js/menu4.js' %}></script>
 <script type="text/javascript" src={% static 'js/replace.js' %}></script>
 <script type="text/javascript" src={% static 'js/hover.js' %}></script>
 
@@ -22,30 +20,6 @@
 
 
 <body>
-<div id="intro">
-<script src={% static 'js/particles.js' %}></script>
-<script src={% static 'js/app.js' %}></script>
-<div id="notification">
-	<div id="lastupdate"><span>上次更新|&nbsp;</span><br>
-		&emsp;&emsp;&emsp;&emsp;&emsp;2017.04.09 13:30<br>
-	</div>
-	<div id="whatsnew"><span>新增功能|&nbsp;</span><br>
-		&emsp;&emsp;&emsp;&emsp;&emsp;篩選活動<br>
-		&emsp;&emsp;&emsp;&emsp;&emsp;活動簡介<br>
-		&emsp;&emsp;&emsp;&emsp;&emsp;我也要宣傳活動<br>
-	</div>
-	<div id="todo"><span>預計功能|&nbsp;</span><br>
-		&emsp;&emsp;&emsp;&emsp;&emsp;手機板網頁<br>
-		&emsp;&emsp;&emsp;&emsp;&emsp;排序方式<br>
-		&emsp;&emsp;&emsp;&emsp;&emsp;我的活動<br>
-		&emsp;&emsp;&emsp;&emsp;&emsp;搜尋功能<br>
-		&emsp;&emsp;&emsp;&emsp;&emsp;時間軸<br>
-	</div>
-</div>
-<div id="loader"></div>
-<div id="welcome"><img src={% static 'image/logo.png' %}></div>
-<div><img id="godown" src={% static 'image/down_arrow.png' %}></div>
-</div>
 
 <div id="head">
 	<ul>
@@ -98,7 +72,7 @@
 		{% if request.user.is_authenticated %}
         <li class = "option">哈囉~{{request.user}}
 			<ul class = "selection">
-				<a href="/activity_mine/"><li><div id="selection_text">我收藏的活動</div></li></a>
+				<a href="/"><li><div id="selection_text">所有活動</div></li></a>
 				<a href="/accounts/logout/"><li><div id="selection_text">登出</div></li></a>
 		</li>
         
@@ -156,48 +130,8 @@
 		</div>
 		</a>
 		{% endfor %}
-		<!--
-		<div id="block">
-			<div class="image"><img src={% static 'image/test2.jpg' %}></div>
-			<h1>Taipei Hackathon</h1>
-			<div id="brief">介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹</div>
-			<div id="more_info">
-				<p>時間&nbsp;&nbsp;|&nbsp;&nbsp;2017.12.20(日)19:30&nbsp;~&nbsp;2017.12.21(一)05:00<br></p>
-				<p>地點&nbsp;&nbsp;|&nbsp;&nbsp;陽明大學音樂前廳<br></p>
-				<p>報名&nbsp;&nbsp;|&nbsp;&nbsp;2017.12.20(日)19:30&nbsp;~&nbsp;2017.12.21(一)05:00<br></p>
-				<p>費用&nbsp;&nbsp;|&nbsp;&nbsp;100元<br></p>
-				<p>對象&nbsp;&nbsp;|&nbsp;&nbsp;陽明大學全體師生<br></p>
-				<p>標籤&nbsp;&nbsp;|&nbsp;&nbsp;OAF<br></p>
-			</div>
-		</div>
-		<div id="block">
-			<div class="image"><img src={% static 'image/test3.jpg' %}></div>
-			<h1>陽明山登山會師</h1>
-			<div id="brief">介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹</div>
-			<div id="more_info">
-				<p>時間&nbsp;&nbsp;|&nbsp;&nbsp;2017.12.20(日)19:30&nbsp;~&nbsp;2017.12.21(一)05:00<br></p>
-				<p>地點&nbsp;&nbsp;|&nbsp;&nbsp;陽明大學音樂前廳<br></p>
-				<p>報名&nbsp;&nbsp;|&nbsp;&nbsp;2017.12.20(日)19:30&nbsp;~&nbsp;2017.12.21(一)05:00<br></p>
-				<p>費用&nbsp;&nbsp;|&nbsp;&nbsp;100元<br></p>
-				<p>對象&nbsp;&nbsp;|&nbsp;&nbsp;陽明大學全體師生<br></p>
-				<p>標籤&nbsp;&nbsp;|&nbsp;&nbsp;OAF<br></p>
-			</div>
-		</div>
-		<div id="block">
-		</div>
-		<div id="block">
-		</div>
-		<div id="block">
-		</div>
-		<div id="block">
-		</div>
-		<div id="block">
-		</div>
-		<div id="block">
-		</div>
-		<div id="block">
-		</div>
-		-->
+
+
 	<!--content--></div>
 <!--container--></div>
 	<div id="footer">

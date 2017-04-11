@@ -38,7 +38,23 @@
 			<div class="title_subtext">{{ post.副標題 }}</div>
 			<div class="title_line"></div>
 			<div class="title_date">{{ post.開始日期與時間|date:"Y . m . d" }}</div>
+		
+					<form action="#" method="post">
+						
+						{% csrf_token %}
+						{% if post in allpost %}
+						
+						<input class="submit" type="submit" name={{ post.id }} value="取消收藏">
+						<div class="heart">{{ post.like_set.all|length }}<i class="fa fa-heart" aria-hidden="true"></i></div>
+						{% else %}
+						
+						<input class="submit" type="submit" name={{ post.id }} value="我要收藏">
+						<div class="heart">{{ post.like_set.all|length }}<i class="fa fa-heart-o" aria-hidden="true"></i></div>
+						{% endif %}
+					</form>
+		
 		</div>
+					
 	</div>
 	<div class="p2">
 		<div class="brief_title">簡介</div>

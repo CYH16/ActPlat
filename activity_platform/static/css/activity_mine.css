@@ -9,139 +9,13 @@ body {
 	font-family: Microsoft JhengHei;
 }
 
-#intro{
-	background: rgb(15,24,43);
-	height: 100zh;
-	width: 100%;
-	position: relative;
-	border-bottom: 1px solid rgba(240, 255, 255, 1);
-}
-
-/*通知*/
-#notification{
-	background: rgba(240, 255, 255, .7);
-	height: auto;
-	width: 250px;
-	position: absolute;
-	top: 30px;
-	left: 30px;
-	display: none;
-}
-#lastupdate, #whatsnew, #todo{
-	width: 100%;
-	padding: 5px 10px 5px 10px;
-	text-align: left;
-	font-size: 15px;
-}
-span{
-	font-weight: bold;
-	text-align: left;
-	font-size: 16px;
-}
-
-/*loading*/
-#loader{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -50px;
-	margin-left: -50px;
-	height: 80px;
-	width: 80px;
-	border-radius: 50%;
-	border: 20px solid rgb(15,24,43);
-	border-right: 20px solid rgba(240, 255, 255, 1);
-	border-left: 20px solid rgba(240, 255, 255, 1);
-	-webkit-animation: loading 2s infinite linear;
-	-moz-animation: loading 2s infinite linear;
-}
-
-@-webkit-keyframes loading {
-	from {
-		-webkit-transform: rotate(0deg);
-	}
-	to {
-		-webkit-transform: rotate(360deg);
-	}
-}
-@-moz-keyframes loading {
-	from {
-		-moz-transform: rotate(0deg);
-	}
-	to {
-		-moz-transform: rotate(360deg);
-	}
-}
-
-#welcome{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -150px;
-	margin-left: -150px;
-	height: 300px;
-	width: 300px;
-	background: white;
-	display: none;
-	background: rgba(240, 255, 255, 0);
-}
-
-#welcome img{
-	height: 300px;
-	width: 300px;
-}
-
-#godown{
-	display: none;
-	position: absolute;
-	left: 50%;
-	margin-left: -25px;
-	bottom: 0;
-	height: 50px;
-	width: 50px;
-	float: right;
-	background-image: url("down_arrow.png");
-	background-size: 50px 50px;
-	-webkit-animation-duration: .8s;
-	-moz-animation-duration: .8s;
-	-webkit-animation-name: bounce;
-	-moz-animation-name: bounce;
-	-webkit-animation-iteration-count: infinite;
-	-moz-animation-iteration-count: infinite;
-	cursor: pointer;
-}
-
-@-webkit-keyframes bounce {
-  0%{
-    bottom:0;
-  }
-  50%{
-	bottom:10px;
-  }
-  100%{
-    bottom:0;
-  }
-}
-
-@moz-keyframes bounce {
-  0%{
-    bottom:0;
-  }
-  50%{
-	bottom:10px;
-  }
-  100%{
-    bottom:0;
-  }
-}
-
 /*導覽列*/
 #head{
 	background: rgba(240, 255, 255, .95);
 	height: 60px;
 	width: 100%;
 	position: fixed;
-	top: -60px;
+	top: 0;
 	z-index: 99;
 	color: rgb(15,24,43);
 }
@@ -223,7 +97,6 @@ ul.right{
 
 /*主要內容*/
 #container{
-	display: none;
 	margin: 0 auto 0;
 	padding-top: 70px;
 	width: 1200px;
@@ -367,7 +240,8 @@ ul.right{
 	height: 60px;
 	width: 100%;
 	clear: both;
-	display: none;
+	position: absolute;
+	bottom: 0;
 }
 
 #footer:hover{

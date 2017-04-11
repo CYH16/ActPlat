@@ -188,6 +188,37 @@ from {opacity: 0;}
 to {opacity: 1;}
 }
 
+.title form{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 460px;
+	left: 50%;
+	margin-left: -50px;
+	color: rgba(240, 255, 255, 1);
+}
+
+input[type="submit"]{
+	width: 100px;
+	padding:5px 15px;
+	background: rgb(15,24,43);
+	color: rgba(240, 255, 255, 1);
+	border:1px solid rgba(240, 255, 255, 1);
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.heart{
+	font-size: 20px;
+}
+
+.fa-heart-o, .fa-heart{
+	margin-left: 5px;
+}
+
 /*p2*/
 .brief_title{
 	height: 70%;
