@@ -267,8 +267,12 @@ ul.right{
 	padding-top: 10px;
 }
 
+#title{
+	position: relative;
+}
+
 #title_text{
-	width: 350px;
+	width: 310px;
 	height: 35px;
 	margin: 0;
 	font-size: 25px;
@@ -282,7 +286,7 @@ ul.right{
 }
 
 #like_count{
-	width: 35px;
+	width: 50px;
 	height: 35px;
 	line-height: 35px;
 	font-size: 20px;

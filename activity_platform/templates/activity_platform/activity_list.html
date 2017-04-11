@@ -137,9 +137,9 @@
 			<div class="image" style="background-image: url({% static 'image/' %}{{ post.圖片 }});background-size: 100%;background-position: center;"></div>
 			<div class="text">
 				<div id="title">
-					<div id="title_text">{{ post.活動名稱 }}
-						<div id="like_count">{{ post.like_set.all|length }}<i class="fa fa-heart-o" aria-hidden="true"></i></div>
-					</div>
+					<div id="title_text">{{ post.活動名稱 }}</div>
+					<div id="like_count">{{ post.like_set.all|length }}<i class="fa fa-heart-o" aria-hidden="true"></i></div>
+					
 				</div>
 				<div id="time">{{ post.開始日期與時間|date:"Y.m.d (D) H:i" }} ~ {{ post.結束日期與時間|date:"Y.m.d (D) H:i" }}</div>
 				<div id="brief">{{ post.簡介 }}</div>
