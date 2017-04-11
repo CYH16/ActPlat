@@ -7,6 +7,7 @@ body {
 	background: rgb(15,24,43);
 	text-align: center;
 	font-family: Microsoft JhengHei;
+	position: relative;
 }
 
 /*導覽列*/
@@ -240,8 +241,6 @@ ul.right{
 	height: 60px;
 	width: 100%;
 	clear: both;
-	position: absolute;
-	bottom: 0;
 }
 
 #footer:hover{
