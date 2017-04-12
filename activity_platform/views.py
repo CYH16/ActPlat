@@ -46,7 +46,12 @@ def activity_detail(request, pk):
             allpost = Like.objects.get(user=user).post.all()
             return render(request, 'activity_platform/activity_detail.html',locals())
     else:
-        return render(request, 'activity_platform/activity_detail.html', {'post': post})
+        if not request.user.is_authenticated():
+            return render(request, 'activity_platform/activity_detail.html', {'post': post})
+        else:
+            user = request.user.username
+            allpost = Like.objects.get(user=user).post.all()
+            return render(request, 'activity_platform/activity_detail.html', locals())
     
 	
 def activity_about(request):
