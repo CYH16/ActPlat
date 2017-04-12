@@ -19,12 +19,14 @@
 
 <div id="container">
 	<div id="block">
+	    
         <form action="" method="post">
 			{% csrf_token %}
             <label for="username">帳號：</label>
             <input type="text" name="username" value="" id="username"> <br />
             <label for="password">密碼：</label>
             <input type="password" name="password" value="" id="password"> <br />
+			{% if error %}<p style="font-size:15px;font-weight:normal;">登入失敗 請確定帳號密碼無誤</p>{% endif %}
             <input type="submit" value="登入" />
             <a href="/accounts/register/"><input type="button" value="來去註冊" /></a>
         </form>

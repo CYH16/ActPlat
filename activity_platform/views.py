@@ -64,16 +64,22 @@ def login(request):
     if request.user.is_authenticated(): 
         return HttpResponseRedirect('/')
 
-    username = request.POST.get('username', '')
-    password = request.POST.get('password', '')
+    error = False
     
-    user = auth.authenticate(username=username, password=password)
-
-    if user is not None and user.is_active:
-        auth.login(request, user)
-        return HttpResponseRedirect('/')
+    if request.method == "POST":
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
+    
+        user = auth.authenticate(username=username, password=password)
+    
+        if user is not None and user.is_active:
+            auth.login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+            error = True
+            return render(request, 'activity_platform/login.html', locals())
     else:
-        return render(request, 'activity_platform/login.html')
+        return render(request, 'activity_platform/login.html', locals())
 		
 def logout(request):
     auth.logout(request)
