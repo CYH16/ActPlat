@@ -101,6 +101,7 @@ ul.right{
 	margin: 0 auto 0;
 	padding-top: 70px;
 	width: 1200px;
+	min-height: 500px;
 }
 
 #content{
