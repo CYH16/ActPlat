@@ -253,7 +253,7 @@ input[type="submit"]{
 	text-align: left;
 	padding: 10px 0 0 0;
 	font-size: 25px;
-	overflow: hidden;
+	overflow: auto;
 }
 
 /*p3*/

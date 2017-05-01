@@ -9,4 +9,5 @@ urlpatterns = [
 	url(r'^accounts/login/$',views.login),
 	url(r'^accounts/logout/$',views.logout),
 	url(r'^accounts/register/$',views.register),
+	url(r'^add_new/$',views.add_new),
 ]

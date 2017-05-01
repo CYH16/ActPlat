@@ -1,0 +1,21 @@
+from django import forms
+
+class Add_new(forms.Form):
+    活動名稱 = forms.CharField(max_length=15)
+    活動副標題 = forms.CharField(max_length=30)
+    圖片=forms.ImageField(required=False)
+    開始日期與時間 = forms.DateTimeField(input_formats=["%Y-%m-%dT%H:%M"])
+    結束日期與時間 = forms.DateTimeField(input_formats=["%Y-%m-%dT%H:%M"])
+    簡單地點 = forms.CharField(max_length=200)
+    簡單費用 = forms.CharField(max_length=200)
+    報名截止日期與時間 = forms.DateTimeField(required=False, input_formats=["%Y-%m-%dT%H:%M"])
+    簡介 = forms.CharField(max_length=1000)
+    詳細地點 = forms.CharField(max_length=200)
+    詳細費用 = forms.CharField(max_length=200)
+    活動對象 = forms.CharField(max_length=200)
+    人數限制 = forms.CharField(max_length=200)
+    聯絡資訊 = forms.CharField()
+    性質 = forms.CharField(max_length=200)
+    類型 = forms.CharField(max_length=200)
+    費用分類 = forms.CharField(max_length=200)
+    活動對象分類 = forms.CharField(max_length=200)

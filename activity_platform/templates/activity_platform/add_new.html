@@ -1,0 +1,133 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="網頁關鍵字">	
+<title>ActPlat - 登入</title>
+<link rel="SHORTCUT ICON" href={% static 'image/just_logo.png' %}>
+
+<script src="https://use.fontawesome.com/f4d3a939e1.js"></script>
+<link rel="stylesheet" href= {% static 'css/add_new.css' %} type="text/css" />
+<script type="text/javascript" src={% static 'js/jquery-3.1.1.min.js' %}></script>
+
+</head>
+
+
+<body>
+
+<div id="container">
+	<div id="block">
+	    
+        <form action="" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{% if errors %}
+			<label>好像有地方填錯囉，<br>按上一頁檢查一下吧！</label><br /><br />
+			{% endif %}
+            <label for="活動名稱">活動名稱：</label><br />
+            <p>請不要超過15個字。</p>
+				<input type="text" name="活動名稱" value="" id="活動名稱"> <br />
+            <label for="活動副標題">活動副標題：</label><br />
+			<p>請不要超過30個字。</p>
+				<input type="text" name="活動副標題" value="" id="活動副標題"> <br />
+			
+			<label for="圖片">圖片：</label><br />
+			<p>請上傳jpg檔，而且檔名請不要用預設檔名（例如：圖片一）以免錯誤。沒填的話就沒有囉。</p>
+				<input id="圖片" type="file" class="" name="圖片"><br />
+			<label for="開始日期與時間">開始日期與時間：</label><br />
+			<p>要輸入喔。</p>
+				<input type="datetime-local" name="開始日期與時間" id="開始日期與時間"><br />
+            <label for="結束日期與時間">結束日期與時間：</label><br />
+			<p>要輸入喔。</p>
+				<input type="datetime-local" name="結束日期與時間" id="結束日期與時間"><br />
+			<label for="簡單地點">簡單地點：</label><br />
+			<p>重要！請輸入不多不少8~10個字！如果想要分行，請在想分行的地方打&lt;br&gt;，例如：陽明大學&lt;br&gt新醫學館。</p>
+				<input type="text" name="簡單地點" value="" id="簡單地點"> <br />
+			<label for="簡單費用">簡單費用：</label><br />
+			<p>重要！數字請盡量用半形阿拉伯數字，並且不要輸入超過10個字元！例如：免費、1000元/人。</p>
+				<input type="text" name="簡單費用" value="" id="簡單費用"> <br />
+			<label for="報名截止日期與時間">報名截止日期與時間：</label><br />
+			<p>不須報名則留空即可。</p>
+				<input type="datetime-local" name="報名截止日期與時間" id="報名截止日期與時間"><br />
+			<label for="簡介">簡介：</label><br />
+			<p>重要！一行大概26個全形字元，如果超過就會自動分行！</p>
+				<textarea type="text" name="簡介" value="" id="簡介"></textarea> <br />
+			<label for="詳細地點">詳細地點：</label><br />
+			<p>可以打比較詳細的地點。</p>
+				<input type="text" name="詳細地點" value="" id="詳細地點"> <br />
+			<label for="詳細費用">詳細費用：</label><br />
+			<p>可以打比較詳細的費用，備餐或其他優惠也可以列出。</p>
+				<input type="text" name="詳細費用" value="" id="詳細費用"> <br />
+			<label for="活動對象">活動對象：</label><br />
+			<p>這個活動的目標對象。</p>
+				<input type="text" name="活動對象" value="" id="活動對象"> <br />
+			<label for="人數限制">人數限制：</label><br />
+			<p>不限就打不限。</p>
+				<input type="text" name="人數限制" value="" id="人數限制"> <br />
+			<label for="聯絡資訊">聯絡資訊：</label><br />
+			<p>請輸入活動專頁，例如臉書活動專頁。</p>
+				<input type="text" name="聯絡資訊" value="" id="聯絡資訊"> <br />
+			
+			<label>篩選條件：</label><br />
+			<p>以下四項是幫助篩選活動的條件，請照實輸入。</p>
+			<label for="性質">性質：</label>
+				<select name="性質">
+　					<option value="學校活動">學校活動</option>
+　					<option value="學生會">學生會</option>
+　					<option value="系學會">系學會</option>
+　					<option value="社團活動">社團活動</option>
+　					<option value="其他">其他</option>
+				</select><br />
+			<label for="類型">類型：</label>
+				<select name="類型">
+　					<option value="室內．學術">室內．學術</option>
+　					<option value="室內．休閒">室內．休閒</option>
+　					<option value="戶外．運動">戶外．運動</option>
+　					<option value="戶外．休閒">戶外．休閒</option>
+　					<option value="其他2">其他</option>
+				</select><br />
+			<label for="費用分類">費用分類：</label>
+				<select name="費用分類">
+　					<option value="免費且備餐">免費且備餐</option>
+　					<option value="免費">免費</option>
+　					<option value="每人0-100元">每人0-100元</option>
+　					<option value="每人101-500元">每人101-500元</option>
+　					<option value="每人500元以上">每人500元以上</option>
+				</select><br />
+			<label for="活動對象分類">活動對象分類：</label>
+				<select name="活動對象分類">
+　					<option value="不限">不限</option>
+　					<option value="校內學生">校內學生</option>
+　					<option value="系內限定">系內限定</option>
+　					<option value="社團限定">社團限定</option>
+				</select><br /><br />
+				
+			<label>最後一點：</label>
+			<p>因為這個網站還屬於草創階段，所以還有很多不足之處，需要大家的幫忙；所以如果方便的話，希望利用這個網站宣傳的活動（就是剛填完的你啦）順便推廣這個網站（非強制的啦~），像是在PO宣傳文、換大頭貼、倒數照等的時候可以提到這個粉專和網站(ActPlat)，讓更多人知道這個網站的存在，也讓我們一起讓陽明更好~~</p>
+			<br>
+			<p>啊，如果填完想改的，就私訊我們粉專吧~</p>
+            <input type="submit" value="填好了~宣傳去~" />
+        </form>
+	</div>
+
+	<div id="footer">
+		<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSewtGW6lKVvS1dvGQ-m54w1GTy6TN6BDE_JF2FXnutTS38OZg/viewform">
+			<div id="icon_contact"><i class="fa fa-envelope-o" aria-hidden="true"></i><div id="contact">給點回饋</div></div>
+		</a>
+		<a href="/add_new/">
+			<div id="icon_contact"><i class="fa fa-bullseye" aria-hidden="true"></i><div id="contact">我要宣傳</div></div>
+		</a>
+		<a target="_blank" href="https://www.facebook.com/ActPlat">
+			<div id="icon_contact"><i class="fa fa-facebook-square" aria-hidden="true"></i><div id="contact">臉書專頁</div></div>
+		</a>
+		<a target="_blank" href="{% url 'activity_about' %}">
+			<div id="icon_contact"><i class="fa fa-question" aria-hidden="true"></i><div id="contact">關於我們</div></div>
+		</a>
+		<a href="/">
+			<div id="icon_contact"><i class="fa fa-home" aria-hidden="true"></i><div id="contact">網站首頁</div></div>
+		</a>
+	</div>	
+</div>
+</body>
+</html>

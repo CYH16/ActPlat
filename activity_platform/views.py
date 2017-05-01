@@ -1,4 +1,5 @@
 from .models import Post, Like
+from .forms import Add_new
 from django.utils import timezone
 from django.shortcuts import render, render_to_response, HttpResponse, HttpResponseRedirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
@@ -94,3 +95,37 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'activity_platform/register.html',locals())
+
+def add_new(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/accounts/login/')
+    else:
+        if request.method == 'POST':
+            errors = False
+            f = Add_new(request.POST, request.FILES)
+            if f.is_valid():
+                活動名稱 = f.cleaned_data['活動名稱']
+                副標題 = f.cleaned_data['活動副標題']
+                圖片 = f.cleaned_data['圖片']
+                簡介 = f.cleaned_data['簡介']
+                開始日期與時間 = f.cleaned_data['開始日期與時間']
+                結束日期與時間 = f.cleaned_data['結束日期與時間']
+                地點 = f.cleaned_data['簡單地點']
+                對象 = f.cleaned_data['活動對象']
+                費用 = f.cleaned_data['簡單費用']
+                人數限制 = f.cleaned_data['人數限制']
+                報名死線 = f.cleaned_data['報名截止日期與時間']
+                聯絡資訊 = f.cleaned_data['聯絡資訊']
+                類型 = f.cleaned_data['類型']
+                標籤 = f.cleaned_data['性質']+" "+f.cleaned_data['類型']+" "+f.cleaned_data['費用分類']+" "+f.cleaned_data['活動對象分類']
+                詳細地點 = f.cleaned_data['詳細地點']
+                詳細費用 = f.cleaned_data['詳細費用']
+ 
+                Post.objects.create(活動名稱=活動名稱, 副標題=副標題, 圖片=圖片, 簡介=簡介, 開始日期與時間=開始日期與時間, 結束日期與時間=結束日期與時間, 地點=地點, 對象=對象, 費用=費用, 人數限制=人數限制, 報名死線=報名死線, 聯絡資訊=聯絡資訊, 類型=類型, 標籤=標籤, 詳細地點=詳細地點, 詳細費用=詳細費用)
+			
+                return HttpResponseRedirect('/')
+            else:
+                errors = True
+                return render(request, 'activity_platform/add_new.html',locals())
+        else:
+            return render(request, 'activity_platform/add_new.html',locals())
